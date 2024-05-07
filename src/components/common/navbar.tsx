@@ -73,7 +73,7 @@ export function Navbar() {
                             <ListItem href="/services#demontage" title="Entretien">
                                 Plus besoin de vous soucier de vos arbres !
                             </ListItem>
-                            <ListItem href="/services/entretien" title="Entretien">
+                            <ListItem href="/services/entretien" title="Débroussaillage">
                                 Libérer votre espace, débarassez-vous des broussailles !
                             </ListItem>
                         </ul>

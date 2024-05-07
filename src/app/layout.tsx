@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={inter.className + "flex flex-col"}>
+      <body className={inter.className + "flex flex-col w-full"}>
         <Header/>
         {children}
       </body>
