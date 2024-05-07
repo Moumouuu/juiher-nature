@@ -1,5 +1,6 @@
 import {Banner} from "@/components/common/banner";
 import {cn} from "@/lib/utils";
+import {Numbers} from "@/components/home/numbers";
 
 export default function Home() {
 
@@ -8,6 +9,7 @@ export default function Home() {
     return (
         <div className="">
           <Banner title={homeTitle}/>
+            <Numbers/>
         </div>
   );
 }
