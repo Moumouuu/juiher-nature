@@ -2,6 +2,7 @@ import {Banner} from "@/components/common/banner";
 import {cn} from "@/lib/utils";
 import {Numbers} from "@/components/home/numbers";
 import {Certifications} from "@/components/home/certifications";
+import {Materials} from "@/components/home/materials";
 
 export default function Home() {
 
@@ -12,6 +13,7 @@ export default function Home() {
             <Banner title={homeTitle}/>
             <Numbers/>
             <Certifications/>
+            <Materials/>
         </div>
   );
 }
