@@ -1,7 +1,7 @@
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
 import {ReactNode} from "react";
-import {Topsvg} from "@/components/common/topsvg";
+import {Botsvg} from "@/components/common/botsvg";
 
 
 interface BannerProps {
@@ -27,7 +27,7 @@ export const Banner = ({title} : BannerProps ) => {
                 </Link>
             </Button>
 
-           <Topsvg/>
+           <Botsvg/>
         </div>
     )
 }

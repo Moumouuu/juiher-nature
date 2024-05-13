@@ -138,3 +138,7 @@
 .custom-shape-divider-bottom-1715090560 .shape-fill {
   fill: #FFFFFF;
 }
+
+html {
+  scroll-behavior: smooth;
+}
