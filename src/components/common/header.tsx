@@ -13,7 +13,7 @@ export const Header = () => {
                 </div>
                 <Navbar/>
                 <Button variant={"juiher"} asChild>
-                    <Link href={"#contact"}>Nous contacter</Link>
+                    <Link href={"/#contact"}>Nous contacter</Link>
                 </Button>
             </header>
             <div className={"block lg:hidden"}>

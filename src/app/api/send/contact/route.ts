@@ -9,12 +9,7 @@ export async function POST(request:Request, response:NextResponse) {
     const {email, message} = await request.json();
 
     if(!email || !message) {
-        return {
-            status: 400,
-            body: {
-                error: "Missing email or message",
-            },
-        };
+        return Response.error()
     }
 
        const data = await resend.emails.send({
