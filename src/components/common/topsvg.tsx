@@ -1,6 +1,8 @@
+import * as React from "react";
+
 export const Topsvg = () => {
     return (
-        <div className="custom-shape-divider-bottom-1715085233">
+        <div className="custom-shape-divider-top-1715090613">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                  preserveAspectRatio="none">
                 <path

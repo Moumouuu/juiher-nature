@@ -26,7 +26,7 @@ export function Navbarmobile() {
                             <Link href={"/services#demontage"}>Démontage d&apos;arbre</Link>
                         </li>
                         <li className={"my-1"}>
-                            <Link href={"/services/entretien"}>Débroussaillage</Link>
+                            <Link href={"/services#entretien"}>Débroussaillage</Link>
                         </li>
                     </ul>
 

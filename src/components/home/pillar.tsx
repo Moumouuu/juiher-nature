@@ -24,21 +24,22 @@ export const Pillar = () => {
             <div className={"text-center"}>
                 <H1 label={"les pilliers de notre engagement"}/>
             </div>
-            <span className={"text-muted-foreground text-center"}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, non!
-            </span>
-
+            <div className={"flex justify-center w-full"}>
+               <span className={"text-muted-foreground text-center w-full lg:w-[70%]"}>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam dolores doloribus ducimus laboriosam obcaecati officiis sed sunt. Iste, sed.
+                </span>
+            </div>
             <CardJuiher
                 reversed
                 items={items}
                 cta={{
                     title: "En savoir plus",
                     href: "/qse"
-            }}
-                image={{
+                }}
+                image={[{
                     url: "/assets/images/qse.jpg",
                     alt: "Qualité sécurité environnement"
-            }}
+                }]}
             />
 
         </div>

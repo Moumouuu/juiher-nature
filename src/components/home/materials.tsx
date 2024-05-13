@@ -27,19 +27,21 @@ export const Materials = () => {
             <div className={"text-center"}>
                 <H1 label={"parc métériel récent et performant"}/>
             </div>
-            <span className={"text-muted-foreground text-center"}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, non!
-            </span>
+            <div className={"flex justify-center w-full"}>
+               <span className={"text-muted-foreground text-center w-full lg:w-[70%]"}>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam dolores doloribus ducimus laboriosam obcaecati officiis sed sunt. Iste, sed.
+                </span>
+            </div>
 
             <CardJuiher items={items}
                         cta={{
                             title: "En savoir plus",
                             href: "/equipements"
-                            }}
-                        image={{
+                        }}
+                        image={[{
                             url: "/assets/images/materials/abattage.jpg",
                             alt: "Matériels performant et récent"
-                            }}
+                        }]}
             />
 
             <div className={"flex justify-center mt-8"}>
