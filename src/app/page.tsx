@@ -4,8 +4,10 @@ import {Numbers} from "@/components/home/numbers";
 import {Certifications} from "@/components/home/certifications";
 import {Materials} from "@/components/home/materials";
 import {Pillar} from "@/components/home/pillar";
-import {Map} from "@/components/home/map";
 import {Contact} from "@/components/home/contact";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import('../components/home/map'), {ssr: false});
 
 export default function Home() {
 

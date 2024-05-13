@@ -12,7 +12,7 @@ interface MapProps {
     label: string;
 }
 
-export const Map = () => {
+export default function Map() {
     const iconSize = 40;
     const juihernatureAxes: LatLngExpression = [44.43044099313026, 0.12722739711419073];
     const icon = L.icon({
@@ -37,6 +37,13 @@ export const Map = () => {
             label: "Juiher Nature"
         }
     ]
+    const [isMounted, setIsMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    if(!isMounted) return null;
 
     return (
         <div className={"relative flex flex-col py-24 bg-juiher-ternary-green p-4 "}>
