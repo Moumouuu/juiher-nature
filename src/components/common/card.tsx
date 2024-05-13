@@ -4,11 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import * as React from "react";
 import {cn} from "@/lib/utils";
+import {H2} from "@/components/common/h2";
 
 interface ICardProps {
-    items: {
+    title?:string;
+    items?: {
         title: string, text: string
     }[],
+    content?: React.JSX.Element,
     cta: {
         title: string,
         href: string
@@ -16,17 +19,25 @@ interface ICardProps {
     image: {
         url: string,
         alt: string
-    },
+    }[],
     reversed?: boolean
 }
 
-export const CardJuiher = ({items, cta, image, reversed}:ICardProps) => {
+export const CardJuiher = ({items, cta, image, reversed, title,content}:ICardProps) => {
+
+    const isMultipleImage = image.length > 1;
+
     return (
-        <div className={"flex justify-center w-full"}>
+        <div className={"flex justify-center w-full mt-4"}>
             <div className={cn("flex flex-col lg:flex-row items-center lg:w-[80%]", reversed ? 'lg:flex-row-reverse ' : '')}>
-                <div className={cn("flex flex-col lg:mr-12", reversed ? 'lg:ml-12 mr-0':'')}>
+                <div className={cn("flex flex-col lg:mr-12", reversed ? 'lg:ml-12 mr-0' : '')}>
+
                     {
-                        items.map((item, index) => (
+                        title && title.length > 0 &&
+                        <H2 label={title}/>
+                    }
+                    {
+                        items ? items.map((item, index) => (
                             <div key={index} className={"flex items-center m-4 w-full "}>
                                 <NumberIndex index={index}/>
                                 <div className={"flex flex-col"}>
@@ -35,6 +46,8 @@ export const CardJuiher = ({items, cta, image, reversed}:ICardProps) => {
                                 </div>
                             </div>
                         ))
+                            :
+                            content
                     }
                     <div className={"flex justify-center"}>
                         <Button variant={"juiher"} className={"my-8"} asChild>
@@ -43,8 +56,14 @@ export const CardJuiher = ({items, cta, image, reversed}:ICardProps) => {
                     </div>
 
                 </div>
-                <Image width={500} height={300} className={"rounded-2xl"}
-                       src={image.url} alt={image.alt}/>
+                <div className={cn(reversed ? "lg:items-end" : "lg:items-start", "w-full h-full flex flex-col justify-center items-center")}>
+                    {
+                        image.map((img, index) => (
+                                <Image key={index} width={isMultipleImage ? 700 / 1.5 : 400} height={isMultipleImage ? 400 / 1.5 : 400} className={cn(isMultipleImage ? "aspect-video" : "aspect-square","rounded-2xl object-cover p-2")}
+                                       src={img.url} alt={img.alt}/>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )
