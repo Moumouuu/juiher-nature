@@ -35,7 +35,7 @@ export const Contact = () => {
     }
 
     return (
-        <div className={"flex flex-col py-24 p-4 "}>
+        <div id={"contact"} className={"flex flex-col py-24 p-4 "}>
             <div className={"text-center"}>
                 <H1 label={"Nous contacter"}/>
             </div>

@@ -6,7 +6,7 @@ import {Navbarmobile} from "@/components/common/navbarmobile";
 export const Header = () => {
     return (
         <>
-            <div className={"hidden lg:flex w-full p-3 items-center justify-around bg-juiher-ternary-green"}>
+            <header className={"hidden lg:flex w-full p-3 items-center justify-around bg-juiher-ternary-green"}>
                 <div className={'flex items-center '}>
                     <div className={"h-12 w-12 bg-green-500 rounded-full mr-3"}></div>
                     <h1 className={"font-semibold"}>Juiher nature</h1>
@@ -15,7 +15,7 @@ export const Header = () => {
                 <Button variant={"juiher"} asChild>
                     <Link href={"#contact"}>Nous contacter</Link>
                 </Button>
-            </div>
+            </header>
             <div className={"block lg:hidden"}>
                 <Navbarmobile/>
             </div>
