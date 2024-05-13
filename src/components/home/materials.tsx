@@ -32,13 +32,15 @@ export const Materials = () => {
 
             <div className={"flex justify-center w-full"}>
                 <div className={"flex flex-col lg:flex-row items-center lg:w-[80%]"}>
-                    <div className={"flex flex-col mr-8"}>
+                    <div className={"flex flex-col mr-12"}>
                         {
                             items.map((item, index) => (
-                                <div className={"flex items-center m-3"}>
-                                    <div
-                                        className={"bg-juiher-secondary-green/70 flex items-center justify-center rounded-xl p-3 mr-3"}>
-                                        <span>{index}</span>
+                                <div key={index} className={"flex items-center m-4 w-full "}>
+                                    <div>
+                                        <div
+                                            className={"bg-juiher-secondary-green/70 flex items-center justify-center rounded-full w-12 h-12 p-3 mr-3"}>
+                                            <span className={'text-xl font-semibold'}>{index + 1 }</span>
+                                        </div>
                                     </div>
                                     <div className={"flex flex-col"}>
                                         <h3 className={"text-lg uppercase font-semibold"}>{item.title}</h3>
@@ -63,15 +65,9 @@ export const Materials = () => {
                         {Array.from({length: 5}).map((_, index) => (
                             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                                 <div className="p-1">
-                                    <Card>
+                                    <Card className={"bg-transparent border-none"}>
                                         <CardContent
-                                            className="flex flex-col aspect-square items-center justify-center p-6">
-                                            <div className={"bg-red-300 rounded-xl p-14 "}>
-                                                <Image className={"rounded-2xl"}
-                                                       src={"/assets/images/materials/abattage.jpg"} width={300}
-                                                       height={300} alt={"Matériels performant et récent"}/>
-                                            </div>
-                                            <span className="text-xl font-semibold">Quali Territoires</span>
+                                            className="aspect-square rounded-2xl bg-[url('/assets/images/materials/abattage.jpg')] bg-cover">
                                         </CardContent>
                                     </Card>
                                 </div>
