@@ -4,6 +4,7 @@ import {Numbers} from "@/components/home/numbers";
 import {Certifications} from "@/components/home/certifications";
 import {Materials} from "@/components/home/materials";
 import {Pillar} from "@/components/home/pillar";
+import {Map} from "@/components/home/map";
 
 export default function Home() {
 
@@ -16,6 +17,7 @@ export default function Home() {
             <Certifications/>
             <Materials/>
             <Pillar/>
+            <Map/>
         </div>
   );
 }
