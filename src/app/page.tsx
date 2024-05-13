@@ -3,6 +3,7 @@ import {cn} from "@/lib/utils";
 import {Numbers} from "@/components/home/numbers";
 import {Certifications} from "@/components/home/certifications";
 import {Materials} from "@/components/home/materials";
+import {Pillar} from "@/components/home/pillar";
 
 export default function Home() {
 
@@ -14,6 +15,7 @@ export default function Home() {
             <Numbers/>
             <Certifications/>
             <Materials/>
+            <Pillar/>
         </div>
   );
 }

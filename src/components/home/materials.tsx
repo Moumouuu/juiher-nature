@@ -1,8 +1,8 @@
 import {H1} from "@/components/common/h1";
-import Image from "next/image";
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import * as React from "react";
+import {CardJuiher} from "@/components/common/card";
 
 export const Materials = () => {
 
@@ -30,30 +30,17 @@ export const Materials = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, non!
             </span>
 
-            <div className={"flex justify-center w-full"}>
-                <div className={"flex flex-col lg:flex-row items-center lg:w-[80%]"}>
-                    <div className={"flex flex-col mr-12"}>
-                        {
-                            items.map((item, index) => (
-                                <div key={index} className={"flex items-center m-4 w-full "}>
-                                    <div>
-                                        <div
-                                            className={"bg-juiher-secondary-green/70 flex items-center justify-center rounded-full w-12 h-12 p-3 mr-3"}>
-                                            <span className={'text-xl font-semibold'}>{index + 1 }</span>
-                                        </div>
-                                    </div>
-                                    <div className={"flex flex-col"}>
-                                        <h3 className={"text-lg uppercase font-semibold"}>{item.title}</h3>
-                                        <p className={""}>{item.text}</p>
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </div>
-                    <Image width={500} height={300} className={"rounded-2xl"}
-                           src={"/assets/images/materials/abattage.jpg"} alt={"Matériels performant et récent"}/>
-                </div>
-            </div>
+            <CardJuiher items={items}
+                        cta={{
+                            title: "En savoir plus",
+                            href: "/equipements"
+                            }}
+                        image={{
+                            url: "/assets/images/materials/abattage.jpg",
+                            alt: "Matériels performant et récent"
+                            }}
+            />
+
             <div className={"flex justify-center mt-8"}>
                 <Carousel
                     opts={{
