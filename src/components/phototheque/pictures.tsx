@@ -36,6 +36,7 @@ export function Pictures() {
   });
 
   if (error) return <div>Error during loading certifications</div>;
+  if (isLoading) return <div>Loading...</div>;
 
   return (
     <div className="w-full py-10">
