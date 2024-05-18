@@ -45,7 +45,6 @@ export default function PageCertification() {
 }
 
 function CertifItem({ item, index }: { item: any; index: number }) {
-  console.log(item);
   return (
     <div
       className={cn(
