@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Banner } from "@/components/common/banner";
 import { cn } from "@/lib/utils";
-import { Pictures } from "@/components/phototheque/pictures";
+import { Container } from "@/components/phototheque/container";
 
 export default function PagePhototheque() {
   const homeTitle = (
@@ -21,7 +21,7 @@ export default function PagePhototheque() {
   return (
     <div className="w-full">
       <Banner title={homeTitle} />
-      <Pictures />
+      <Container />
     </div>
   );
 }

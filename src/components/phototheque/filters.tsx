@@ -34,7 +34,7 @@ export const Filters = () => {
       const params = new URLSearchParams(searchParams.toString());
       params.set(name, value);
 
-      return pathname + "?" + params.toString();
+      return pathname + "?" + params.toString() + "#pictures";
     },
     [searchParams],
   );
@@ -44,14 +44,14 @@ export const Filters = () => {
       const params = new URLSearchParams(searchParams.toString());
       params.delete(name);
 
-      return pathname + "?" + params.toString();
+      return pathname + "?" + params.toString() + "#pictures";
     },
     [searchParams],
   );
 
   function handleClick(filter: { label: string; value: string }) {
     const newFilter = createQueryString("filter", filter.value);
-
+    console.log(newFilter);
     // remove filter if already selected
     if (search === filter.value) {
       router.push(deleteQueryString("filter"));
@@ -62,7 +62,7 @@ export const Filters = () => {
   }
 
   return (
-    <div className={"flex w-full flex-col"}>
+    <div id="pictures" className={"flex w-full flex-col"}>
       <span className={"text-lg mb-3"}>Filtres rapides</span>
       <div className={"flex flex-wrap items-center gap-2"}>
         {filters.map((filter) => (
