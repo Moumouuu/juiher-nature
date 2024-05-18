@@ -1,14 +1,23 @@
+"use client";
+
 import { Banner } from "@/components/common/banner";
 import * as React from "react";
-import { cn } from "@/lib/utils";
+import { cn, defaultFetcherGet } from "@/lib/utils";
 import { H1 } from "@/components/common/h1";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Topbotsvg } from "@/components/common/topbotsvg";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import useSWR from "swr";
 
 export default function PageCertification() {
+  const url =
+    process.env.NEXT_PUBLIC_STRAPI_API_URL + "certifications?populate=*";
+  const { data, error, isLoading } = useSWR(url, defaultFetcherGet);
+
+  if (error) return <div>Error during loading certifications</div>;
+
   const homeTitle = (
     <h1
       className={cn(
@@ -24,69 +33,35 @@ export default function PageCertification() {
     </h1>
   );
 
-  const items = [
-    {
-      title: "SGS",
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos ",
-      image: "SGS.png",
-      svg: false,
-      reverse: false,
-    },
-    {
-      title: "SGS",
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos ",
-      image: "SGS.png",
-      svg: true,
-      reverse: true,
-    },
-    {
-      title: "SGS",
-      description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos ",
-      image: "SGS.png",
-      svg: false,
-      reverse: false,
-    },
-  ];
   return (
     <div className="w-full">
       <Banner title={homeTitle} />
-      {items.map((item, index) => (
-        <CertifItem key={index} item={item} />
+      {isLoading ? <div>Loading...</div> : null}
+      {data?.data.map((certif: any, index: number) => (
+        <CertifItem key={index} item={certif} index={index} />
       ))}
     </div>
   );
 }
 
-function CertifItem({
-  item,
-}: {
-  item: {
-    title: string;
-    description: string;
-    image: string;
-    svg: boolean;
-    reverse: boolean;
-  };
-}) {
+function CertifItem({ item, index }: { item: any; index: number }) {
+  console.log(item);
   return (
     <div
       className={cn(
-        item.svg ? "bg-juiher-ternary-green py-24" : "py-8",
+        index % 2 === 0 ? "bg-juiher-ternary-green py-24" : "py-8",
         "relative w-full flex justify-center ",
       )}
     >
       <div
         className={cn(
-          item.reverse ? "lg:flex-row-reverse" : "lg:flex-row",
+          index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row",
           "flex flex-col justify-center items-center w-[80%]",
         )}
       >
         <div className={"flex flex-col flex-1 mr-0 lg:mx-8"}>
-          <H1 label={item.title} />
-          <p>{item.description}</p>
+          <H1 label={item.attributes.Titre} />
+          <p>{item.attributes.Description}</p>
           <div className={"flex justify-center my-4"}>
             <Button variant={"juiher"} asChild>
               <Link href={"/#contact"}>Nous contacter</Link>
@@ -99,8 +74,8 @@ function CertifItem({
           <CardContent className={`relative aspect-square`}>
             <Image
               className={"object-cover rounded-2xl"}
-              src={`/assets/images/certifs/${item.image}`}
-              alt={item.title}
+              src={item.attributes.Logo.data.attributes.url}
+              alt={'Logo de la certification "' + item.attributes.Titre + '"'}
               fill={true}
             />
           </CardContent>
