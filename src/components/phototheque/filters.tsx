@@ -51,7 +51,7 @@ export const Filters = () => {
 
   function handleClick(filter: { label: string; value: string }) {
     const newFilter = createQueryString("filter", filter.value);
-    console.log(newFilter);
+
     // remove filter if already selected
     if (search === filter.value) {
       router.push(deleteQueryString("filter"));
