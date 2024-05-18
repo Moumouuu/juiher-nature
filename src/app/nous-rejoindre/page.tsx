@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Banner } from "@/components/common/banner";
 import { cn } from "@/lib/utils";
+import { WorkSheet } from "@/components/nous-rejoindre/workSheet";
 
 export default function PageTeam() {
   const homeTitle = (
@@ -19,6 +20,7 @@ export default function PageTeam() {
   return (
     <div className="w-full">
       <Banner title={homeTitle} />
+      <WorkSheet />
     </div>
   );
 }
