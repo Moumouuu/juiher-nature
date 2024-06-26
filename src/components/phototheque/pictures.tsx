@@ -25,7 +25,7 @@ export function Pictures() {
           <p className="font-bold text-4xl text-white">
             {picture.attributes.Titre}
           </p>
-          <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          <p className="font-normal text-base my-4 max-w-lg text-neutral-200 text-wrap">
             {picture.attributes.description}
           </p>
         </div>
