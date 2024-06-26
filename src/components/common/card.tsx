@@ -74,14 +74,14 @@ export const CardJuiher = ({
         <div
           className={cn(
             reversed ? "lg:items-end" : "lg:items-start",
-            "w-[400px] h-full flex flex-col justify-center items-center"
+            "w-[300px] lg:w-[400px] h-full flex flex-col justify-center items-center"
           )}
         >
           {image.map((img, index) => (
             <Image
               key={index}
-              width={isMultipleImage ? 700 / 1.5 : 600}
-              height={isMultipleImage ? 400 / 1.5 : 600}
+              width={isMultipleImage ? 500 / 1.5 : 300}
+              height={isMultipleImage ? 400 / 1.5 : 400}
               className={cn(
                 isMultipleImage ? "aspect-video" : "aspect-square",
                 "rounded-2xl object-cover p-2"

@@ -3,7 +3,7 @@ import { CardJuiher } from "@/components/common/card";
 
 export const DemontageService = () => {
   const content = (
-    <p>
+    <p >
       Le démontage d&apos;arbre est une opération technique nécessitant une
       approche experte et sécurisée pour assurer un résultat optimal tout en
       minimisant les risques. Notre équipe spécialisée est dédiée à évaluer
@@ -15,9 +15,9 @@ export const DemontageService = () => {
       végétaux, en les recyclant conformément aux normes environnementales en
       vigueur. Avec notre engagement envers la sécurité et notre équipement
       spécialisé, nous sommes prêts à répondre à vos besoins de démontage
-      d&spos;arbres avec professionnalisme et efficacité. Contactez-nous dès
+      d&apos;arbres avec professionnalisme et efficacité. Contactez-nous dès
       maintenant pour discuter de votre projet et bénéficier de notre expertise
-      en démontage d&pos;arbres.
+      en démontage d&apos;arbres.
     </p>
   );
   return (
