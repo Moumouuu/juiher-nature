@@ -1,9 +1,8 @@
 "use client";
-import React from "react";
-import { Card, LayoutGrid } from "../ui/layout-grid";
+import { defaultFetcherGet } from "@/lib/utils";
 import { useSearchParams } from "next/navigation";
 import useSWR from "swr";
-import { defaultFetcherGet } from "@/lib/utils";
+import { Card, LayoutGrid } from "../ui/layout-grid";
 
 export function Pictures() {
   const url =
@@ -25,7 +24,7 @@ export function Pictures() {
           <p className="font-bold text-4xl text-white">
             {picture.attributes.Titre}
           </p>
-          <p className="font-normal text-base my-4 max-w-lg text-neutral-200 text-wrap">
+          <p className="font-normal text-base my-4 max-w-lg text-neutral-200 text-wrap w-full">
             {picture.attributes.description}
           </p>
         </div>
