@@ -4,8 +4,12 @@ import { H1 } from "@/components/common/h1";
 export const ElagageService = () => {
   const items = [
     {
-      title: "",
-      text: "Notre équipe de professionnels est spécialisée dans l’élagage des arbres et arbustes pour garantir leur bonne santé et leur développement harmonieux. Nous intervenons avec des techniques respectueuses de l’environnement pour minimiser notre impact sur la nature. Nous sommes équipés du matériel nécessaire pour intervenir en toute sécurité, même sur les arbres les plus hauts. Contactez-nous dès maintenant pour en savoir plus sur nos services d’élagage.",
+      title: "Manuel",
+      text: "L'élagage manuel est une technique traditionnelle qui permet un soin méticuleux et adapté à chaque arbre et arbuste. Notre équipe de professionnels utilise des outils manuels pour effectuer des coupes précises, favorisant ainsi la santé et la croissance harmonieuse des plantes. Cette méthode artisanale est idéale pour les jardins où l'attention aux détails est primordiale. En respectant l'environnement, nous veillons à minimiser notre impact tout en assurant la sécurité de nos interventions, même sur les arbres les plus hauts. Contactez-nous pour découvrir comment notre expertise en élagage manuel peut transformer votre espace vert.",
+    },
+    {
+      title: "Mécanique",
+      text: "L'élagage mécanique est une solution moderne et efficace pour gérer de vastes zones ou des arbres difficiles d'accès. Grâce à notre équipement de pointe, nous pouvons réaliser des interventions rapides et sécurisées, tout en préservant la santé et la structure des arbres. Cette méthode est particulièrement adaptée aux grands projets où la rapidité et l'efficacité sont essentielles. Nos techniques mécaniques sont conçues pour être respectueuses de l'environnement, réduisant l'impact sur la nature. Contactez-nous pour en savoir plus sur nos services d’élagage mécanique et comment ils peuvent répondre à vos besoins spécifiques.",
     },
   ];
   return (

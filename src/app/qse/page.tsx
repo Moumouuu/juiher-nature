@@ -24,7 +24,7 @@ export default function PageQSE() {
     {
       title: "Qualité",
       description:
-        "Chez Juiher Nature, notre engagement envers la qualité est fondamental. Nous nous efforçons constamment de surpasser les attentes de nos clients en offrant des produits et des services d'une qualité exceptionnelle. Chaque aspect de notre travail est soumis à des contrôles rigoureux pour garantir une satisfaction totale et durable. ",
+        "Chez JUIHER NATURE, nous mettons un point d'honneur à protéger la santé de nos employés en leur offrant des formations continues et des équipements adaptés. Nous assurons que chaque membre de notre équipe est préparé à accomplir ses tâches en toute sécurité, avec des compétences et des connaissances à jour.",
       image: "quality.jpeg",
       svg: false,
       reverse: false,
@@ -32,7 +32,7 @@ export default function PageQSE() {
     {
       title: "Sécurité",
       description:
-        "La sécurité est au cœur de nos préoccupations chez Juiher Nature. Nous avons mis en place des normes strictes pour protéger la santé et le bien-être de nos employés, de nos clients et de l'environnement. Grâce à une formation continue et à l'utilisation d'équipements de pointe, nous assurons des opérations sécurisées et sans risque.",
+        "La sécurité est au cœur de nos activités. Nous identifions et évaluons constamment les risques liés à nos interventions en élagage et travaux forestiers. Grâce à des mesures préventives rigoureuses et à la fourniture d'équipements de protection individuelle, nous créons un environnement de travail où la sécurité est une priorité absolue.",
       image: "security.jpeg",
       svg: true,
       reverse: true,
@@ -40,7 +40,7 @@ export default function PageQSE() {
     {
       title: "Environnement",
       description:
-        " Nous sommes profondément engagés dans la protection de l'environnement chez Juiher Nature. En intégrant des pratiques durables dans toutes nos activités, de la gestion des ressources à la réduction des déchets, nous nous efforçons de minimiser notre impact environnemental. Nous cherchons également à offrir des solutions écologiques à nos clients pour promouvoir un avenir durable.",
+        "Conscients de notre impact écologique, nous avons renforcé notre engagement environnemental. Nous valorisons les déchets de bois en produits dérivés et favorisons l'utilisation d'huiles de chaîne biodégradables pour nos équipements. Ces actions visent à réduire notre empreinte écologique tout en respectant les exigences de notre secteur.",
       image: "nature.jpeg",
       svg: false,
       reverse: false,

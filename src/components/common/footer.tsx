@@ -52,8 +52,7 @@ export const Footer = () => {
         <div className="flex w-full justify-around">
           <div className="my-6 text-gray-500 dark:text-gray-400 ">
             <h3 className="text-lg font-semibold">Nos horaires</h3>
-            <p>Lundi – Vendredi : 8h00 – 17h30</p>
-            <p>Samedi – Dimanche : Fermé</p>
+            <p>Lundi – Vendredi : 8h00 – 12h00 / 14h00 – 17h00</p>
           </div>
           <div className="my-6 text-gray-500 dark:text-gray-400">
             <p>Tel: 05 53 76 03 97</p>
@@ -63,7 +62,7 @@ export const Footer = () => {
 
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2024{" "}
+          © 2025{" "}
           <a href="https://pluviaux.fr" className="hover:underline">
             Pluviaux™
           </a>
